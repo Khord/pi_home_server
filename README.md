@@ -1,6 +1,6 @@
-# Pi Home Server
+# Pi Home Lab Server
 
-**Initial Setup Checklist**
+**Initial Setup Checklist (Raspbian Lite)**
 ```shell
 sudo passwd
 sudo vi /etc/hostname
