@@ -15,13 +15,13 @@ let hours=$((${upSeconds}/3600%24))
 let days=$((${upSeconds}/86400))
 UPTIME=`printf "%d days, %02dh%02dm%02ds" "$days" "$hours" "$mins" "$secs"`
 
-# get the load averages
+# get load averages
 read one five fifteen rest < /proc/loadavg
 
 echo "$(tput setaf 4)"\
 "  _  ___                ____  _
  | |/ / |__   ___  _ __|  _ \(_)   OpenVPN........: `service openvpn status | awk '/Active/ {print $2}'`
- | ' /| '_ \ / _ \| '__| |_) | |   PiHole.........: `pihole status | awk '/DNS/ {print $5}'`
+ | ' /| '_ \ / _ \| '__| |_) | |   SlackBot.......: `screen -ls | awk '/slackshell/ {print tolower($4)}' | tr -d '()'`
  | . \| | | | (_) | |  |  __/| |   NoIP DUC.......: `service noip2 status | awk '/Active/ {print $2}'`
  |_|\_\_| |_|\___/|_|  |_|   |_|   HomeAssistant..: `service home-assistant@homeassistant status | awk '/Active/ {print $2}'`"
 
