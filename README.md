@@ -36,7 +36,7 @@ sudo reboot
 - http://unix.stackexchange.com/questions/199886/noip2-cant-update-my-ip-address-correctly-after-computer-reboot
 ```shell
 sudo vi /etc/init.d/noip2.sh
-sleep 10 (append after first echo line in case 1)
+sleep 10 #(append after first echo line in case 1)
 ```
 
 **PiVPN**
