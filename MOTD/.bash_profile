@@ -27,7 +27,7 @@ echo "$(tput setaf 4)"\
 
 echo "$(tput setaf 2)
    .~~.   .~~.    `date +"%A, %e %B %Y, %r"`
-  '. \ ' ' / .'   `uname -srmo`$(tput setaf 1)
+  '. \ ' ' / .'   `uname -srm``lsb_release -a 2>/dev/null | awk '/Description:/ {print " | "$2" "$4" "$5}'`$(tput setaf 1)
    .~ .~~~..~.    Uptime.............: ${UPTIME}
   : .~.'~'.~. :   Disk Space.........: "$(extend "$(df -h / | awk 'NR==2 { printf "Used: %sB, Free: %sB",$3,$4; }')")"
  ~ (   ) (   ) ~  Memory.............: "$(extend "$(free -m | awk 'NR==2 { printf "Used: %sMB, Free: %sMB",$3,$4; }')")"
