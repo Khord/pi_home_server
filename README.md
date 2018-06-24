@@ -15,8 +15,9 @@ sudo reboot
 curl -L https://install.pivpn.io | bash
 pivpn -a
 
-# scp .bash_profile to ~/ then:
-alias motd=". ~/.bash_profile"
+sudo mv /etc/motd ~/motd.bak
+# Copy .bash_profile with MOTD into ~/ then:
+echo 'alias motd=". ~/.bash_profile"' >> ~/.bash_aliases
 ```
 
 **Package Checklist**
