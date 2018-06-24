@@ -2,17 +2,23 @@
 
 **Initial Setup Checklist (Raspbian Lite)**
 ```shell
-sudo passwd
-sudo vi /etc/hostname
-sudo vi /etc/hosts
-sudo reboot
+sudo raspi-config
+  # password
+  # hostname
+  # static ip
+  # locale
+echo -e "\ndtoverlay=pi3-disable-wifi\ndtoverlay=pi3-disable-bt" | sudo tee -a /boot/config.txt
 sudo apt-get update
 sudo apt-get dist-upgrade
+sudo reboot
+
+# scp .bash_profile to ~/
+alias motd=". ~/.bash_profile"
 ```
 
 **Package Checklist**
 - fail2ban
-- htop
+- [log2ram](https://github.com/azlux/log2ram)
 
 **NoIP DUC**
 - http://www.noip.com/support/knowledgebase/install-ip-duc-onto-raspberry-pi/
