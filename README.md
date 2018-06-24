@@ -15,7 +15,8 @@ sudo reboot
 curl -L https://install.pivpn.io | bash
 pivpn -a
 
-sudo mv /etc/motd ~/motd.bak
+sudo mv /etc/motd ~/motd-backup/motd.bak
+sudo mv /etc/update-motd.d/10-uname ~/motd-backup/10-uname.bak
 # Copy .bash_profile with MOTD into ~/
 ```
 
