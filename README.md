@@ -50,6 +50,9 @@ sleep 10 (append after first echo line in case 1)
 /ip route dst-address=10.8.0.0/24 gateway=192.168.215.3 gateway-status=192.168.215.3 reachable via ether2-local-master distance=1 scope=30 target-scope=10
 ```
 
+**Unifi Controller**
+- https://lazyadmin.nl/it/installing-unifi-controller-on-a-raspberry-pi-in-5-min/
+
 **HomeAssistant**
 - https://home-assistant.io/docs/installation/raspberry-pi/
 - https://home-assistant.io/docs/autostart/systemd/
