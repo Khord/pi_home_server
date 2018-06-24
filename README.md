@@ -12,13 +12,17 @@ sudo apt-get update
 sudo apt-get dist-upgrade
 sudo reboot
 
-# scp .bash_profile to ~/
+curl -L https://install.pivpn.io | bash
+pivpn -a
+
+# scp .bash_profile to ~/ then:
 alias motd=". ~/.bash_profile"
 ```
 
 **Package Checklist**
 - fail2ban
 - [log2ram](https://github.com/azlux/log2ram)
+- bind9
 
 **NoIP DUC**
 - http://www.noip.com/support/knowledgebase/install-ip-duc-onto-raspberry-pi/
